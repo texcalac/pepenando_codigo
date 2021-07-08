@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Pepenando Código</title>
+    <link>https://texcalac.github.io/pepenando_codigo/</link>
+    <atom:link href="https://texcalac.github.io/pepenando_codigo/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Pepenando Código
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Números aleatorios</title>
+      <dc:creator>Tex</dc:creator>
+      <link>https://texcalac.github.io/pepenando_codigo/posts/2021-07-08-nmeros-aleatorios</link>
+      <description>Generación de números aleatorios</description>
+      <guid>https://texcalac.github.io/pepenando_codigo/posts/2021-07-08-nmeros-aleatorios</guid>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

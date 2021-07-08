@@ -11,9 +11,7 @@ author:
 date: 07-05-2021
 output:
   distill::distill_article:
-    css: styles.css
     self_contained: false
-    highlight: rstudio
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +24,7 @@ Una de las funciones posibles en R es la generación de números aleatorios, los
 
 El comando **`sample`** nos permite seleccionar/generar números aleatorios enteros.
 
-```{r}
+```{r aleatorios, class.output="Rout"}
 aleatorios <- sample(25:40, 25, replace = T)
 ```
 

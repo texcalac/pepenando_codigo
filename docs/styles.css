@@ -1,0 +1,40 @@
+/* Importamos fuentes de Google's API */
+@import url('https://fonts.googleapis.com/css2?family=Red Hat Display');
+@import url('https://fonts.googleapis.com/css2?family=Hind Madurai');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous Pro');
+
+/*-- Fondo blanco y letra gris --*/
+.distill-site-nav {
+  font-family: 'Red Hat Display', sans-serif;
+  color: #363636; 
+  background-color: #FFFFFF;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+/*-- Cambia el color al poner el cursor sobre liga de texto --*/
+.distill-site-nav a:hover {
+  color: #EE6A50;
+}
+
+/* Use specific font in the body of the text */
+html, body, p {
+  
+  font-family: 'Hind Madurai', sans-serif;
+  font-weight: 200;
+  line-height: 1.3; 
+  font-size: 1.05em;
+  color: #333333;
+  font-style: normal;
+  
+}
+
+/* Change the appearance of in-line code chunks */
+code {
+  font-family: 'Anonymous Pro', sans-serif;
+  color: #525252;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+

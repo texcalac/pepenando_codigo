@@ -9,4 +9,17 @@ navbar:
       href: index.html
     - text: "Acerca de..."
       href: about.html
-output: distill::distill_article
+    - icon: fab fa-github
+      href: https://github.com/texcalac
+    - icon: fab fa-twitter
+      href: https://twitter.com/texcalac
+  search: false
+# output: distill::distill_article
+output:
+  distill::distill_article:
+    css: styles.css
+collections:
+  posts:
+    share: [twitter, facebook]
+    citations: false
+base_url: https://texcalac.github.io/pepenando_codigo/
