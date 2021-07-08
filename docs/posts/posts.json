@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-07-08-nmeros-aleatorios/",
+    "title": "Números aleatorios",
+    "description": "Generación de números aleatorios",
+    "author": [
+      {
+        "name": "Tex",
+        "url": {}
+      }
+    ],
+    "date": "2021-07-05",
+    "categories": [],
+    "contents": "\nUna de las funciones posibles en R es la generación de números aleatorios, los resultados pueden concatenarse y almacenarse en forma de vector.\nNúmeros aleatorios enteros\nEl comando sample nos permite seleccionar/generar números aleatorios enteros.\n\n\naleatorios <- sample(25:40, 25, replace = T)\n\n\n\nEl primer argumento es un vector de números válidos a partir de los cuáles se generarán los valores aleatorios, en este caso van de 25 a 40. El segundo argumento indica el número de valores aleatorios a generar, que para este ejemplo serán 25 números aleatorios. El tercer argumento replace = T indica que cada valor aleatorio puede tener duplicados. Finalmente el resultado es guardado en el objeto de nombre aleatorios.\nRevisamos el resultado\n\n\naleatorios\n\n\n [1] 34 27 35 29 28 25 29 27 29 40 25 32 35 25 40 31 30 38 29 32 36 34\n[23] 37 35 40\n\nGeneración aleatoria de valores de tipo carácter\nTambién es posible seleccionar y/o generar valores aleatorios de tipo carácter, para ello necesitamos en el primer argumento un vector con datos válidos a seleccionar, como segundo argumento el total de valores a generar y definir si se permiten duplicados.\n\n\naleat_txt <- sample(c(\"pera\", \"manzana\", \"guayaba\", \"papaya\", \"mango\"), 25, replace = TRUE)\naleat_txt\n\n\n [1] \"guayaba\" \"manzana\" \"mango\"   \"papaya\"  \"mango\"   \"mango\"  \n [7] \"mango\"   \"papaya\"  \"papaya\"  \"mango\"   \"guayaba\" \"pera\"   \n[13] \"pera\"    \"pera\"    \"mango\"   \"guayaba\" \"pera\"    \"papaya\" \n[19] \"mango\"   \"papaya\"  \"papaya\"  \"pera\"    \"papaya\"  \"guayaba\"\n[25] \"guayaba\"\n\nNúmeros aleatorios con decimales\nEl comando runif nos permite generar números aleatorios a partir de la distribución uniforme. Aquí un ejemplo para generar 25 números aleatorios entre 12.7 y 24.6\n\n\naleat_unif <- runif(25, 12.7, 24.6)\naleat_unif\n\n\n [1] 24.32559 22.32509 19.73881 23.74853 19.29823 21.55068 18.93618\n [8] 14.46049 21.79720 20.42289 12.83789 15.23890 14.88140 23.30139\n[15] 17.15875 17.05875 16.72804 13.52665 13.38368 21.00473 15.38508\n[22] 21.09251 13.22581 21.29431 15.62391\n\nPara redondear los resultados debemos agregar el comando round y especificar el redondeo a 1 dígito\n\n\naleat_unif <- round(runif(25, 12.7, 24.6), 1)\naleat_unif\n\n\n [1] 20.3 19.7 17.2 21.1 22.1 13.2 15.5 22.7 19.1 13.5 18.6 21.5 24.0\n[14] 19.8 17.2 15.1 18.8 22.0 17.2 16.7 21.2 20.1 13.3 19.8 14.5\n\nEl comando rnorm nos permite generar números aleatorios a partir de la distribución normal. Aquí un ejemplo para generar 25 números aleatorios con media 24.7 y desviación estándar de 4.3\n\n\naleat_rnorm <- rnorm(25, 24.7, 4.3)\naleat_rnorm\n\n\n [1] 27.08880 16.14904 26.98612 25.62377 17.95490 20.69201 25.48198\n [8] 16.89188 21.02913 26.29913 24.00071 31.43282 22.01570 23.82717\n[15] 25.23424 24.54884 27.62493 27.89301 34.54416 28.05945 20.60572\n[22] 22.92785 18.96695 16.40504 21.62184\n\nPara redondear podemos utilizar nuevamente el comando round\n\n\naleat_rnorm <- round(rnorm(25, 24.7, 4.3), 1)\naleat_rnorm\n\n\n [1] 20.0 24.5 29.8 34.0 18.9 26.2 21.7 23.8 16.8 25.9 26.4 29.1 22.4\n[14] 26.8 20.6 30.6 27.1 21.6 26.5 24.5 23.1 23.6 30.2 19.1 20.7\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-07-08T13:24:45-05:00",
+    "input_file": {}
+  }
+]

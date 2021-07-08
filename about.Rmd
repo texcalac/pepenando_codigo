@@ -1,0 +1,9 @@
+---
+title: "Acerca de este blog"
+description: |
+  Pedazos de código que pretenden ser utilidad
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

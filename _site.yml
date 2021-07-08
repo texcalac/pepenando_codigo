@@ -1,0 +1,12 @@
+name: "pepenando_codigo"
+title: "Pepenando Código"
+description: |
+  Pepenando Código
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Inicio"
+      href: index.html
+    - text: "Acerca de..."
+      href: about.html
+output: distill::distill_article
