@@ -16,5 +16,13 @@
       <guid>https://texcalac.github.io/pepenando_codigo/posts/2021-07-08-nmeros-aleatorios</guid>
       <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
     </item>
+    <item>
+      <title>Trabajando con factores en R</title>
+      <dc:creator>Tex</dc:creator>
+      <link>https://texcalac.github.io/pepenando_codigo/posts/2021-07-08-trabajando-con-factores-en-r</link>
+      <description>Ejemplos básicos para la creación de factores.</description>
+      <guid>https://texcalac.github.io/pepenando_codigo/posts/2021-07-08-trabajando-con-factores-en-r</guid>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+    </item>
   </channel>
 </rss>

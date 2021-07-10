@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://texcalac.github.io/pepenando_codigo/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -87,376 +86,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Pepenando Código</title>
+  <title>Trabajando con factores en R</title>
+
+  <meta property="description" itemprop="description" content="Ejemplos básicos para la creación de factores."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-07-05"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-07-05"/>
+  <meta name="article:author" content="Tex"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Pepenando Código"/>
+  <meta property="og:title" content="Trabajando con factores en R"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Ejemplos básicos para la creación de factores."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Pepenando Código"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Pepenando Código"/>
+  <meta property="twitter:title" content="Trabajando con factores en R"/>
+  <meta property="twitter:description" content="Ejemplos básicos para la creación de factores."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Pepenando Código"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Trabajando con factores en R"]},{"type":"character","attributes":{},"value":["Ejemplos básicos para la creación de factores.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Tex"]},{"type":"character","attributes":{},"value":["INSP"]},{"type":"character","attributes":{},"value":["https://www.insp.mx"]}]}]},{"type":"character","attributes":{},"value":["07-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["trabajando-con-factores-en-r_files/anchor-4.2.2/anchor.min.js","trabajando-con-factores-en-r_files/bowser-1.9.3/bowser.min.js","trabajando-con-factores-en-r_files/distill-2.2.21/template.v2.js","trabajando-con-factores-en-r_files/header-attrs-2.9/header-attrs.js","trabajando-con-factores-en-r_files/jquery-1.11.3/jquery.min.js","trabajando-con-factores-en-r_files/popper-2.6.0/popper.min.js","trabajando-con-factores-en-r_files/tippy-6.2.7/tippy-bundle.umd.min.js","trabajando-con-factores-en-r_files/tippy-6.2.7/tippy-light-border.css","trabajando-con-factores-en-r_files/tippy-6.2.7/tippy.css","trabajando-con-factores-en-r_files/tippy-6.2.7/tippy.umd.min.js","trabajando-con-factores-en-r_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1772,282 +1434,233 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="trabajando-con-factores-en-r_files/header-attrs-2.9/header-attrs.js"></script>
+  <script src="trabajando-con-factores-en-r_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="trabajando-con-factores-en-r_files/popper-2.6.0/popper.min.js"></script>
+  <link href="trabajando-con-factores-en-r_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="trabajando-con-factores-en-r_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="trabajando-con-factores-en-r_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="trabajando-con-factores-en-r_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="trabajando-con-factores-en-r_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="trabajando-con-factores-en-r_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="trabajando-con-factores-en-r_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <style type="text/css">
-  /* Importamos fuentes de Google's API */
-  @import url('https://fonts.googleapis.com/css2?family=Red Hat Display');
-  @import url('https://fonts.googleapis.com/css2?family=Hind Madurai');
-  @import url('https://fonts.googleapis.com/css2?family=Anonymous Pro');
-
-  /*-- Fondo blanco y letra gris --*/
-  .distill-site-nav {
-    font-family: 'Red Hat Display', sans-serif;
-    color: #363636; 
-    background-color: #FFFFFF;
-    font-size: 1.3em;
-    font-weight: 400;
-  }
-
-  /*-- Cambia el color al poner el cursor sobre liga de texto --*/
-  .distill-site-nav a:hover {
-    color: #EE6A50;
-  }
-
-  /* Use specific font in the body of the text */
-  html, body, p {
-    
-    font-family: 'Hind Madurai', sans-serif;
-    font-weight: 200;
-    line-height: 1.5; 
-    font-size: 1em;
-    color: #333333;
-    font-style: normal;
-    
-  }
-
-  /* Change the appearance of in-line code chunks */
-  code {
-    font-family: 'Anonymous Pro', sans-serif;
-    color: #525252;
-    font-weight: 400;
-    font-size: 0.9em;
-  }
-
-
-
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Pepenando Código","authors":[]}
+{"title":"Trabajando con factores en R","description":"Ejemplos básicos para la creación de factores.","authors":[{"author":"Tex","authorURL":"#","affiliation":"INSP","affiliationURL":"https://www.insp.mx","orcidID":""}],"publishedDate":"2021-07-05T00:00:00.000+00:00","citationText":"Tex, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Pepenando Código</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Inicio</a>
-<a href="about.html">Acerca de...</a>
-<a href="https://github.com/texcalac">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="https://twitter.com/texcalac">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Pepenando Código">Pepenando Código</h1>
-<a href="posts/2021-07-08-nmeros-aleatorios/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">July 5, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Tex</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Números aleatorios</h2>
-<div class="dt-tags"></div>
-<p>Generación de números aleatorios</p>
-</div>
-</a>
-<a href="posts/2021-07-08-trabajando-con-factores-en-r/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">July 5, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Tex</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Trabajando con factores en R</h2>
-<div class="dt-tags"></div>
-<p>Ejemplos básicos para la creación de factores.</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Pepenando Código</h1>
+<h1>Trabajando con factores en R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Ejemplos básicos para la creación de factores.</p></p>
 </div>
 
+<div class="d-byline">
+  Tex  (INSP)<a href="https://www.insp.mx" class="uri">https://www.insp.mx</a>
+  
+<br/>07-05-2021
+</div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Una tarea recurrente cuando trabajamos en el procesamiento de datos, es la transformación de variables para ajustarlas al formato adecuado para su posterior análisis, tal es el caso de variables que pueden estar en formato numérico o de texto y que contienen datos de categorías que necesitamos procesar. R nos permite almacenar una variable con codificación de tipo <strong>factor</strong> que indica que los valores que la conforman son categorías, por ejemplo: sexo (hombre, mujer), estado civil(soltero, casado), etc. En este post intentaremos dar un vistazo simple a lo que esto significa.</p>
+<p> </p>
+<p>Cargamos las librerías a utilizar</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://stringr.tidyverse.org'>stringr</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Generemos una <code>tabla</code> de ejemplo usando una semilla para la reproducibilidad de resultados.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1234</span><span class='op'>)</span>
+
+<span class='va'>tabla</span> <span class='op'>&lt;-</span> 
+  <span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span><span class='op'>(</span>id <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_c.html'>str_c</a></span><span class='op'>(</span><span class='st'>"folio_"</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>, 
+         sexo <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1L</span>, <span class='fl'>2L</span><span class='op'>)</span>, <span class='fl'>10</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, 
+         edo_civ <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1L</span>, <span class='fl'>2L</span>, <span class='fl'>3L</span><span class='op'>)</span>, <span class='fl'>10</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, 
+         ent <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"edo1"</span>, <span class='st'>"edo2"</span>, <span class='st'>"edo3"</span><span class='op'>)</span>, <span class='fl'>10</span>, replace <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 4
+   id        sexo edo_civ ent  
+   &lt;chr&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;
+ 1 folio_1      2       2 edo1 
+ 2 folio_2      2       3 edo3 
+ 3 folio_3      2       2 edo3 
+ 4 folio_4      2       2 edo3 
+ 5 folio_5      1       2 edo1 
+ 6 folio_6      2       3 edo2 
+ 7 folio_7      1       2 edo1 
+ 8 folio_8      1       2 edo2 
+ 9 folio_9      1       2 edo2 
+10 folio_10     2       2 edo3 </code></pre>
+</div>
+<p>Demos un vistazo a la estructura de la <code>tabla</code></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://pillar.r-lib.org/reference/glimpse.html'>glimpse</a></span><span class='op'>(</span><span class='va'>tabla</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 10
+Columns: 4
+$ id      &lt;chr&gt; &quot;folio_1&quot;, &quot;folio_2&quot;, &quot;folio_3&quot;, &quot;folio_4&quot;, &quot;folio_5…
+$ sexo    &lt;int&gt; 2, 2, 2, 2, 1, 2, 1, 1, 1, 2
+$ edo_civ &lt;int&gt; 2, 3, 2, 2, 2, 3, 2, 2, 2, 2
+$ ent     &lt;chr&gt; &quot;edo1&quot;, &quot;edo3&quot;, &quot;edo3&quot;, &quot;edo3&quot;, &quot;edo1&quot;, &quot;edo2&quot;, &quot;edo…</code></pre>
+</div>
+<p>Las columnas <em>sexo</em>, <em>edo_civ</em> y <em>ent</em> contienen valores que categorizan la información, la tabla las tiene codificadas como numéricas. Generemos medidas de resumen de la <code>tabla</code> y veamos las implicaciones de considerarlas como numéricas</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>tabla</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>      id                 sexo        edo_civ        ent           
+ Length:10          Min.   :1.0   Min.   :2.0   Length:10         
+ Class :character   1st Qu.:1.0   1st Qu.:2.0   Class :character  
+ Mode  :character   Median :2.0   Median :2.0   Mode  :character  
+                    Mean   :1.6   Mean   :2.2                     
+                    3rd Qu.:2.0   3rd Qu.:2.0                     
+                    Max.   :2.0   Max.   :3.0                     </code></pre>
+</div>
+<p>Como podemos observar, el resultado previo nos muestra los resultados de las columnas <em>sexo</em> y <em>edo_civ</em> como variables numéricas y a la columna <em>ent</em> como caracter. Sobra decir que resulta extraño tener cuartiles de la variable <em>sexo</em> cuando sólo contiene valores “1” y “2” que corresponden a “hombre” y “mujer” respectivamente, sería más conveniente si obtuvieramos las frecuencias para cada uno de los sexos codificados en la tabla.</p>
+<p>Para resolver esto podemos hacer uso de la transformción de la columna de numérica a factor. Un factor en R otorga niveles a cada una de las categorías existentes en una variable, en el caso de la variable sexo de nuestro ejemplo, tenemos dos niveles que corresponden a los valores codificados como 1 y 2. Además, podemos especificar etiquetas para cada uno de los niveles de nuestro factor.</p>
+<p> </p>
+<p><strong>Generar un factor sin especificar niveles y etiquetas</strong></p>
+<p>Podemos convertir una variable a factor sin necesidad de especificar los niveles que la conforman, sólo es necesario especificar dentro del comando <em>factor</em> a la variable a transformar.</p>
+<p>¿qué es lo que sucede?</p>
+<p>R se encargará de identificar los distintos valores dentro de la columna y establecerá de forma automática cada uno como un nivel. En el ejemplo siguiente, convertimos a la variable <em>ent</em> a tipo factor y la sobreescribimos bajo el mismo nombre en la tabla.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tabla</span> <span class='op'>&lt;-</span> <span class='va'>tabla</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>ent <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>ent</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 4
+   id        sexo edo_civ ent  
+   &lt;chr&gt;    &lt;int&gt;   &lt;int&gt; &lt;fct&gt;
+ 1 folio_1      2       2 edo1 
+ 2 folio_2      2       3 edo3 
+ 3 folio_3      2       2 edo3 
+ 4 folio_4      2       2 edo3 
+ 5 folio_5      1       2 edo1 
+ 6 folio_6      2       3 edo2 
+ 7 folio_7      1       2 edo1 
+ 8 folio_8      1       2 edo2 
+ 9 folio_9      1       2 edo2 
+10 folio_10     2       2 edo3 </code></pre>
+</div>
+<p>Nuevamente ejecutamos el comando <em>summary()</em> y vemos el cambio en el resultado, ahora obtendremos la frecuencia de cada uno de los niveles en la malla de datos.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>tabla</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>      id                 sexo        edo_civ      ent   
+ Length:10          Min.   :1.0   Min.   :2.0   edo1:3  
+ Class :character   1st Qu.:1.0   1st Qu.:2.0   edo2:3  
+ Mode  :character   Median :2.0   Median :2.0   edo3:4  
+                    Mean   :1.6   Mean   :2.2           
+                    3rd Qu.:2.0   3rd Qu.:2.0           
+                    Max.   :2.0   Max.   :3.0           </code></pre>
+</div>
+<p> </p>
+<p><strong>Generar un factor especificando los niveles</strong></p>
+<p>También podemos generar un factor especificando los distintos niveles que lo componen, utilicemos el caso de la variable <em>sexo</em> para ejemplificarlo. La variable <em>sexo</em> está codificada con valores 1 y 2, en consecuencia podemos especificar dichos niveles al momento de transformar la variable <em>sexo</em> a factor.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tabla</span> <span class='op'>&lt;-</span> 
+  <span class='va'>tabla</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>sexo <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>sexo</span>, levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 4
+   id       sexo  edo_civ ent  
+   &lt;chr&gt;    &lt;fct&gt;   &lt;int&gt; &lt;fct&gt;
+ 1 folio_1  2           2 edo1 
+ 2 folio_2  2           3 edo3 
+ 3 folio_3  2           2 edo3 
+ 4 folio_4  2           2 edo3 
+ 5 folio_5  1           2 edo1 
+ 6 folio_6  2           3 edo2 
+ 7 folio_7  1           2 edo1 
+ 8 folio_8  1           2 edo2 
+ 9 folio_9  1           2 edo2 
+10 folio_10 2           2 edo3 </code></pre>
+</div>
+<p>Nuevamente visualizamos el <em>summary</em> de la tabla y veremos el resultado con las frecuencias para cada nivel</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>tabla</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>      id            sexo     edo_civ      ent   
+ Length:10          1:4   Min.   :2.0   edo1:3  
+ Class :character   2:6   1st Qu.:2.0   edo2:3  
+ Mode  :character         Median :2.0   edo3:4  
+                          Mean   :2.2           
+                          3rd Qu.:2.0           
+                          Max.   :3.0           </code></pre>
+</div>
+<p> </p>
+<p><strong>Generar un factor especificando niveles y etiquetas</strong></p>
+<p>También podemos generar factores especificando, además de los niveles, una etiqueta para cada nivel, por ejemplo, la variable <em>edo_civ</em> codifica valores 1, 2 y 3 que corresponden a “soltero”, “casado” y “divorciado” respectivamente. A partir de esta información, podemos transformar la variable <em>edo_civ</em> a factor, especificando los niveles que contiene y sus respectivas etiquetas.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tabla</span> <span class='op'>&lt;-</span> 
+  <span class='va'>tabla</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>edo_civ <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>edo_civ</span>, 
+                          levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span>, 
+                          labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"soltero"</span>, <span class='st'>"casado"</span>, <span class='st'>"divorciado"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 4
+   id       sexo  edo_civ    ent  
+   &lt;chr&gt;    &lt;fct&gt; &lt;fct&gt;      &lt;fct&gt;
+ 1 folio_1  2     casado     edo1 
+ 2 folio_2  2     divorciado edo3 
+ 3 folio_3  2     casado     edo3 
+ 4 folio_4  2     casado     edo3 
+ 5 folio_5  1     casado     edo1 
+ 6 folio_6  2     divorciado edo2 
+ 7 folio_7  1     casado     edo1 
+ 8 folio_8  1     casado     edo2 
+ 9 folio_9  1     casado     edo2 
+10 folio_10 2     casado     edo3 </code></pre>
+</div>
+<p>Veamos nuevamente el <em>summary()</em> en dónde obtendremos, al igual que los casos anteriores, las frecuencias de cada uno de los niveles. Note que ahora los valores 1,2 y 3 fueron sustituidos de la tabla por las respectivas etiquetas.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>tabla</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>      id            sexo        edo_civ    ent   
+ Length:10          1:4   soltero   :0   edo1:3  
+ Class :character   2:6   casado    :8   edo2:3  
+ Mode  :character         divorciado:2   edo3:4  </code></pre>
+</div>
+<p>Hasta aquí la gestión básica de factores…</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
