@@ -6,7 +6,7 @@ author:
   - name: Tex
     affiliation: INSP
     affiliation_url: https://www.insp.mx
-date: 07-05-2021
+date: 07-10-2021
 output:
   distill::distill_article:
     self_contained: false
